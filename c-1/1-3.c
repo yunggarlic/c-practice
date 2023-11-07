@@ -17,27 +17,20 @@ int main()
 
 void fahrToCelsius(){
   float fahr, celsius;
-  fahr = LOWER;
   printf("Fahrenheit          Celsius\n");
 
-  for(int i = LOWER; i < UPPER; i = i + STEP){
+  for(fahr = LOWER; fahr < UPPER; fahr += STEP){
     celsius = (5.0 / 9.0) * (fahr - 32.0);
     printf("%4.0f                %6.2f\n", fahr, celsius);
     
-    fahr = i + STEP;
   }
 }
 
 void celsiusToFahr(){ /* 1.4 */
   float fahr, celsius;
-
-  celsius = LOWER;
   printf("Celsius          Fahrenheit\n");
-  for(int i = LOWER; i < UPPER; i = i + STEP){
+  for(celsius = LOWER; celsius < UPPER; celsius+=STEP){
     fahr = (9.0 / 5.0) * (celsius + 32);
-
     printf("%4.0f               %6.2f\n", celsius, fahr);
-
-    celsius = celsius + STEP;
   }
 }
